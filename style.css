@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body { 
+    font-family: 'Inter', sans-serif; 
+}
+
+.glass { 
+    background: rgba(255, 255, 255, 0.8); 
+    backdrop-filter: blur(10px); 
+}
+
+.hero-gradient { 
+    background: linear-gradient(135deg, #1A1A1A 0%, #0052D4 100%); 
+}
+
+/* High-tech Slider Animations */
+.slide-container {
+    perspective: 2000px;
+}
+
+.tech-grid-overlay {
+    background-image: 
+        linear-gradient(rgba(0, 82, 212, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 82, 212, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* Horizontal Slide Animations */
+.enter-right {
+    animation: slide-in-right 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.enter-left {
+    animation: slide-in-left 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slide-in-right {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-in-left {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* High-tech Matrix Rain Effect */
+.matrix-container {
+    position: absolute;
+    inset: 0;
+    z-index: 12;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0.15;
+}
+
+.matrix-column {
+    position: absolute;
+    top: -100%;
+    width: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    color: #0052D4;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    animation: matrix-fall linear infinite;
+}
+
+@keyframes matrix-fall {
+    0% { transform: translateY(-100%); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(200vh); opacity: 0; }
+}
+
+/* Custom Scrollbar for Projects Area */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #C8102E;
+    border-radius: 10px;
+}
+
+.shadow-text {
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* RISE Style Scroll Indicator */
+@keyframes bounce-subtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+.animate-bounce-subtle {
+    animation: bounce-subtle 2s infinite ease-in-out;
+}
+
+[x-cloak] { display: none !important; }
+
+/* Smooth hide scrollbar */
+body::-webkit-scrollbar {
+    width: 6px;
+}
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+body::-webkit-scrollbar-thumb {
+    background: #0052D4;
+    border-radius: 10px;
+}
